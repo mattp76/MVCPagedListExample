@@ -1,6 +1,49 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    var site = ViewBag.Site;
 }
+
+@section styles
+{
+   <link rel="stylesheet" type="text/css" href="http://www.riorentmyhouse.com/engine1/style.css?v=1.2" />
+}
+
+
+@section homepageHero
+{
+
+<!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+
+    <div class="ws_images slideshow rio">
+        <ul>
+            <li><img src="http://www.@(site)rentmyhouse.com/data1/images/1.jpg" alt="Rio property for rent" title="Rio property for rent" id="wows1_0" />Rio property for rent</li>
+            <li><img src="http://www.@(site)rentmyhouse.com/data1/images/2.jpg" alt="Rio property for rent" title="Rio property for rent" id="wows1_1" />Rio property for rent</li>
+            <li><img src="http://www.@(site)rentmyhouse.com/data1/images/3.jpg" alt="Rio property for rent" title="Rio property for rent" id="wows1_0" />Rio property for rent</li>
+        </ul>
+    </div>
+
+
+    <div class="ws_bullets">
+        <div>
+            <a href="#" title="1"><img src="http://www.@(site)rentmyhouse.com/data1/tooltips/1.jpg" alt="Rio property for rent" />Rio property for rent</a>
+            <a href="#" title="1"><img src="http://www.@(site)rentmyhouse.com/data1/tooltips/2.jpg" alt="Rio property for rent" />Rio property for rent</a>
+            <a href="#" title="1"><img src="http://www.@(site)rentmyhouse.com/data1/tooltips/3.jpg" alt="Rio property for rent" />Rio property for rent</a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://www.@(site)rentmyhouse.com/engine1/wowslider1.js"></script>
+    <script type="text/javascript" src="http://www.@(site)rentmyhouse.com/engine1/script1.js"></script>
+    <!-- End WOWSlider.com BODY section -->
+
+</div>
+
+}
+
+
+
+@Html.Action("HomeDiscover")
+
 
 <div class="jumbotron">
     <h1>Contoso University</h1>

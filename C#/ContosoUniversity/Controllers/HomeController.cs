@@ -13,10 +13,27 @@ namespace ContosoUniversity.Controllers
     {
         private SchoolContext db = new SchoolContext();
 
-        public ActionResult Index()
+        public ActionResult Index(string site)
         {
+
+            ViewBag.Site = !string.IsNullOrEmpty(site) ? site : "london";
+            
             return View();
         }
+
+
+
+        public ActionResult HomeDiscover()
+        {
+            //ViewBag.Message = "Your contact page.";
+
+            //dbContext get content from table: cms where contentAliasType = "homeDiscover"
+
+
+
+            return PartialView();
+        }
+
 
         public ActionResult About()
         {
@@ -38,6 +55,9 @@ namespace ContosoUniversity.Controllers
 
             return View(data.ToList());
         }
+
+
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
